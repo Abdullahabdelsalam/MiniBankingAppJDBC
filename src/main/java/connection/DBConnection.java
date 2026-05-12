@@ -15,11 +15,15 @@ public class DBConnection {
             con = DriverManager.getConnection(URL, USER ,PASSWERD );
             con.setAutoCommit(false);
             System.out.println("Connected to database successfully");
-
+            con.commit();
             con.close();
 
-        }catch(SQLException e){
-            e.printStackTrace();
+        }catch(Exception e){
+            try {
+                con.rollback();
+            } catch (SQLException ex) {
+                throw new RuntimeException(ex);
+            }
         }
         return con;
     }
