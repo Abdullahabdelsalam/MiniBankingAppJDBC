@@ -13,7 +13,7 @@ public class DBConnection {
         Connection con = null;
         try {
             con = DriverManager.getConnection(URL, USER ,PASSWERD );
-
+            con.setAutoCommit(false);
             System.out.println("Connected to database successfully");
 
             con.close();
