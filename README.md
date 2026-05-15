@@ -174,9 +174,3 @@ Customer{id=2, firstName='Omar', email='omar@gmail.com', balance=3000.0}
 
 **Abdullah Abdelsalam**
 
----
-
-## ⭐ Contribution
-
-Feel free to fork the project and improve it. Pull requests are welcome!
-🚀
